@@ -1,0 +1,616 @@
+/* 郑州安美星河 - 极简博客风格 CSS */
+/* 仿 Angelo.top 高级文艺风 */
+
+:root {
+    --bg-primary: #faf9f7;
+    --bg-secondary: #ffffff;
+    --text-primary: #2c2c2c;
+    --text-secondary: #6b6b6b;
+    --text-light: #999999;
+    --accent: #c9a67a;
+    --accent-light: #e8dcc8;
+    --border: #e8e6e3;
+    --shadow: rgba(0,0,0,0.05);
+    --wechat-color: #07c160;
+    --font-main: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    --font-serif: "Songti SC", "STSong", "SimSun", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* 顶部微信横幅 */
+.wechat-banner {
+    background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.wechat-banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.wechat-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--wechat-color);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(7, 193, 96, 0.3);
+}
+
+.wechat-highlight .icon {
+    font-size: 18px;
+}
+
+/* 导航栏 */
+header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0 20px;
+    position: sticky;
+    top: 52px;
+    z-index: 999;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+}
+
+nav a {
+    margin: 0 28px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--text-primary);
+}
+
+/* 主容器 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 首页标题区 */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.hero .subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 4px;
+}
+
+.hero .tagline {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* 文章卡片 */
+.article-list {
+    margin-top: 40px;
+}
+
+.article-card {
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.article-card .date {
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.article-card h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.article-card h2 a {
+    color: var(--text-primary);
+}
+
+.article-card h2 a:hover {
+    color: var(--accent);
+}
+
+.article-card .excerpt {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+}
+
+.article-card .tags {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.article-card .tag {
+    font-size: 11px;
+    color: var(--text-light);
+    padding: 4px 12px;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+/* 文章详情页 */
+.article-full {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.article-full h1 {
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.article-full .meta {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.article-full .content {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-primary);
+}
+
+.article-full .content p {
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+.article-full .content h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 32px 0 16px;
+    color: var(--text-primary);
+}
+
+.article-full .content blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+    margin: 24px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-full .wechat-reminder {
+    background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+    border: 1px solid #c8e6c8;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 32px 0;
+    text-align: center;
+}
+
+.article-full .wechat-reminder .label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.article-full .wechat-reminder .wechat-id {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--wechat-color);
+    letter-spacing: 2px;
+}
+
+/* 关于页面 */
+.about-content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-content h1 {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.about-content .content {
+    font-size: 15px;
+    line-height: 2.2;
+}
+
+.about-content .content p {
+    margin-bottom: 24px;
+    text-align: justify;
+}
+
+/* 人物页面 */
+.people-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.people-header h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.person-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.person-card:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.person-card .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.person-card h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.person-card .title {
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.person-card .info {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+}
+
+.person-card .info span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.person-card .info strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.person-card .quote {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* 科普页面 */
+.knowledge-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.knowledge-header h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.knowledge-header p {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* 联系页面 */
+.contact-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.contact-header h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.contact-header p {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.contact-wechat {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.contact-wechat .label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.contact-wechat .big-wechat {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--wechat-color);
+    letter-spacing: 4px;
+    text-shadow: 0 2px 10px rgba(7, 193, 96, 0.2);
+}
+
+.contact-wechat .note {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 16px;
+}
+
+.contact-info {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-info h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: var(--accent);
+}
+
+.disclaimer {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 24px;
+    background: var(--bg-primary);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.disclaimer h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.disclaimer p {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: var(--text-light);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 16px;
+        font-size: 13px;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+    
+    .people-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .article-card {
+        padding: 24px;
+    }
+    
+    .contact-wechat .big-wechat {
+        font-size: 36px;
+    }
+    
+    .wechat-highlight {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.article-card {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.article-card:nth-child(2) { animation-delay: 0.1s; }
+.article-card:nth-child(3) { animation-delay: 0.2s; }
+.article-card:nth-child(4) { animation-delay: 0.3s; }
+.article-card:nth-child(5) { animation-delay: 0.4s; }
