@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://2484136993:qazwsx12341@github.com/2484136993/amxh-site.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+	email = 2484136993@qq.com
+	name = 2484136993

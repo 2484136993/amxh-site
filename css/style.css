@@ -877,3 +877,50 @@ a {
 .read-more:hover {
   gap: 10px;
 }
+
+/* 团队展示区域 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.team-grid p {
+    background: rgba(255,255,255,0.1);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.team-grid p:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.hero-wechat {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #07c160;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    margin: 20px auto;
+}
+
+.hero-wechat svg {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-wechat strong {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
