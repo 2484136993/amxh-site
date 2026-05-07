@@ -1,8 +1,8 @@
 {
-  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
-      "source": "/",
+      "source": "/index.html",
       "headers": [
         {
           "key": "Content-Type",
