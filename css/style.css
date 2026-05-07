@@ -924,3 +924,92 @@ a {
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+/* 固定底部联系方式栏 */
+.fixed-contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.contact-row {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact-left {
+    flex: 1;
+    padding: 14px 18px;
+    background: #1a1a1a;
+    color: #ffd700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+.contact-left strong {
+    color: #fff;
+    font-size: 1.05rem;
+    word-break: break-all;
+}
+.contact-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 22px;
+    background: #07c160;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    min-width: 120px;
+}
+.contact-right:hover {
+    background: #06ad56;
+    transform: scale(1.02);
+}
+.contact-right:active {
+    background: #059a4c;
+    transform: scale(0.97);
+}
+.copy-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    z-index: 10001;
+    display: none;
+}
+.copy-toast.show {
+    display: block;
+}
+body {
+    padding-bottom: 80px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .fixed-contact-bar { width: 100vw; }
+    .contact-left { font-size: 0.82rem; padding: 12px 10px; }
+    .contact-left strong { font-size: 0.9rem; }
+    .contact-right { padding: 12px 12px; font-size: 0.78rem; min-width: 90px; }
+    body { padding-bottom: 70px; }
+}
