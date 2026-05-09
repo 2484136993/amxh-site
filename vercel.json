@@ -1,16 +1,10 @@
 {
-  "name": "amxh-top",
-  "version": 2,
-  "builds": [
+  "headers": [
     {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/baidu_verify_(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
     }
   ]
 }
