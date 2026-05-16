@@ -215,4 +215,7 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url><loc>https://amxh.top/%E9%83%91%E5%B7%9E%E6%99%9F%E5%AE%89%E7%BE%8E%E6%98%9F%E6%B2%B3%E6%97%A5%E5%B8%B8%E8%B5%84%E8%AE%AF.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://amxh.top/%E9%83%91%E5%B7%9E%E6%99%9F%E5%AE%89%E7%BE%8E%E6%98%9F%E6%B2%B3%E7%9B%B8%E5%85%B3%E4%BB%8B%E7%BB%8D.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://amxh.top/%E9%83%91%E5%B7%9E%E5%AE%89%E7%BE%8E%E6%98%9F%E6%B2%B3%E5%8F%A3%E7%A2%91%E6%83%85%E5%86%B5.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
 </urlset>
