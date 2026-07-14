@@ -56,5 +56,19 @@
         </footer>
     </div>
 >>>>>>> 01c69fc (fix: 修复15篇文章内容中残留的href=/，全部改为index.html)
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if(curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhangzishi.cn/cb_push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 </body>
 </html>
